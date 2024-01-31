@@ -1,6 +1,6 @@
 FROM python:3.7-slim
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/myapp
 
 COPY requirements.txt ./
 
@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [ "convert_image_to_pdf.py" ]
+ENTRYPOINT [ "python" , "convert_image_to_pdf.py" ]
